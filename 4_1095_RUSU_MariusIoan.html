@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editor fotografii</title>
+        <link rel="stylesheet" href="4_1095_RUSU_MariusIoan.css">
+    </head>
+    <body>
+        <div class="mainBody">
+            <div class="panels">
+                <canvas id="Canvas"></canvas>
+            </div>
+            <div class="tools1">
+                <canvas id="Histogram"></canvas>
+
+                <div class="panelsOptions">
+                    <button id="btnSelect" onclick="activareSelectie()">
+                        <img id="iconSelection" src="media/selection.png">
+                        SELECT
+                    </button>
+                    <button id="btnCrop" onclick="activareCrop()">
+                        <img id="iconCrop" src="media/crop.png">
+                        CROP
+                    </button>
+                </div>
+                <div class="panelsOptions">
+                    <p id="EffectsText">Effects -></p>
+                    <select id="effectOptions" name="effectOptions">
+                        <option value="None">None</option>
+                        <option value="BnW">Black & White</option>
+                        <option value="Sepia">Sepia</option>
+                        <option value="Invert">Invert</option>
+                    </select>
+                </div>
+                
+                <div class="panelsOptions">
+                        <button id="btnText" onclick="AdaugaText()">
+                            <img id="iconText" src="media/edit-text.png"> 
+                                <!-- <img id="iconTextHover" src="media/edit-text-white.png">  -->
+                        </button>
+                        <select id="fontOption" name="optionFont">
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Josefin Sans">Josefin Sans</option>
+                        </select>
+                        <input id="TextSize" type="number" name="TextSize" min="0" value="12">
+                        <input id="TextColor" type="color" name="TextColor" value="black" />
+                        <button id="WipeText" onclick="WipeText()">Wipe Text</button>
+                </div>
+                <textarea id="TextDeIntrodus" cols="41" rows="6"></textarea>
+                <div class="panelsOptions">
+                    <button id="btnScale" onclick="Scaling()">Scalling</button>
+                    <input id="valoareScalare" type="number" min="0"/>
+                    <select id="scaleOption" name="optionScale">
+                        <option value="Width">Width</option>
+                        <option value="Height">Height</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="tools1">
+                <div id="dropZone"
+                ondrop="dropHandler(event)"
+                ondragover="dragOverHandler(event)"
+                ondragenter="dragEnterHandler(event)"
+                ondragleave="dragLeaveHandler(event)">
+                    Drop image here
+                </div>
+                <button id="btnSave" onclick="saveImage()">
+                    <img id="iconSave" src="media/diskette.png">
+                    SAVE
+                </button>
+                <button id="btnDiscard" onclick="discardImage()">
+                    <img id="iconDiscard" src="media/bin.png">
+                    TRASH
+                </button>
+            </div>
+        </div>
+        <div class="footer">
+            <select id="link" name="Links">
+                <option value="text"><a id="link" href="https://www.flaticon.com/free-icons/edit-tools" title="edit tools icons">Edit tools icons created by dr.iconsart - Flaticon</a></option>
+                <option value="diskette"><a id="link" href="https://www.flaticon.com/free-icons/save" title="save icons">Save icons created by Yogi Aprelliyanto - Flaticon</a></option>
+                <option value="trash"><a id="link" href="https://www.flaticon.com/free-icons/garbage" title="garbage icons">Garbage icons created by Yogi Aprelliyanto - Flaticon</a></option>
+                <option value="select"><a href="https://www.flaticon.com/free-icons/selection" title="selection icons">Selection icons created by Pixel perfect - Flaticon</a></option>
+                <option value="crop"><a href="https://www.flaticon.com/free-icons/crop" title="crop icons">Crop icons created by Ilham Fitrotul Hayat - Flaticon</a></option>
+            </select>
+        </div>
+        <script src="4_1095_RUSU_MariusIoan.js"></script>
+    </body>
+</html>

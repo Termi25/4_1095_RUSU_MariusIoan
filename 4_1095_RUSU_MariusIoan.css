@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Zilla+Slab:wght@500;700&display=swap');
+:root{
+    --orange:#DB3A34;
+    --grey:#323031;
+    --yellow:#FFC857;
+    --white:white;
+    --blueLight:#177E89;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+    background-color: var(--grey);
+}
+.mainBody{
+    display:flex;
+    align-items: flex-start;
+    justify-items: center;
+    background-color: var(--grey);
+    /* flex-wrap: wrap-reverse; */
+}
+.panels,.panelsOptions{
+    display:flex;
+    align-items: flex-start;
+    justify-items: center;
+    margin-top:5px;
+}
+
+.panelsOptions{
+    justify-content: stretch;
+    align-items: center;
+    width: 20vw;
+}
+#Canvas{
+    border: 1vh solid var(--orange);
+    border-radius:10px;
+    background-color: var(--white);
+    height:72vh;
+    width:64vw;
+}
+#Histogram,#TextDeIntrodus,#valoareScalare{
+    border: 1vh solid var(--yellow);
+    border-radius:10px;
+    background-color: var(--white);
+    height:30vh;
+    width:20vw;
+    flex: 1;
+}
+#TextDeIntrodus{
+    height: 15vh;
+}
+#valoareScalare{
+    width:2vw;
+    height:2vh;
+    flex:0;
+}
+.tools,.tools1{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    margin:4px;
+    flex-wrap: wrap;
+}
+
+.tools1{
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.Text{
+    display:flex;
+    align-items: center;
+}
+#dropZone{
+    border: 0.5vh dashed var(--blueLight);
+    border-radius:10px;
+    padding:5vh;
+    margin:1vh;
+    font-size: 1.5em;
+    font-family: "Zilla Slab";
+    font-weight: 700;
+    text-align: center;
+    color:var(--white);
+    flex-grow: 2;
+    /* #084C61 */
+}
+
+#btnSave,#btnText,#btnDiscard,#link,#fontOption,#effectOptions,#TextSize,#TextColor,#WipeText,#btnSelect,#btnCrop,#EffectsText,#btnScale,#scaleOption{
+    font-family: "Zilla Slab";
+    font-weight: 500;
+    font-size:1.3em;
+    color:var(--grey);
+    margin:0.2em;
+    padding:0.2em;
+    border-radius: 10px;
+    cursor:pointer;
+    background-color: var(--yellow);
+    border: none;
+    transition: all 0.3s ease-in-out;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#btnSave,#btnDiscard{
+    width: 12vw;
+}
+
+#btnSave:hover,#btnDiscard:hover,#btnText:hover,#btnSelect:hover,#btnCrop:hover,#WipeText:hover,#btnScale:hover{
+    /* background-color: var(--yellow); */
+    color:var(--white);
+}
+
+#EffectsText{
+    background-color: var(--orange);
+}
+
+#fontOption,#TextSize,#TextColor{
+    width:3.5vw;
+    margin:0.1em;
+    padding:0.1em;
+    flex:1;
+}
+#fontOption{
+    flex: 3;
+}
+
+#iconSelection,#iconCrop,#iconText,#iconSave,#iconDiscard{
+    width:2vw;
+    height:auto;
+    flex-wrap: wrap;
+}
